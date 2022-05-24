@@ -1,0 +1,70 @@
+Name : Vikas Singh
+Applied for : Nodejs role
+
+2. SQL Query
+Here our main task to join 3 different tables.
+SELECT
+  customers.name,
+  Subjects.subjectName
+ FROM customers
+JOIN Subject Student Mapping
+        ON customers.customerId= subjectstudentmapping.customerid
+JOIN Subjects
+     ON Subjects.subjectId= subjectstudentmapping.subjectid
+
+
+3. Nodjes code
+//add data 
+var mysql= require('mysql');
+ var connection = mysql.createConnection({
+ host: 'localhost', user: 'root', password: '', database: 'customers',});
+
+connection.connect();
+const customers =[Given customers array of objects];
+
+var sql= "insert into table_name(name, email) Values ?";
+var query= connection.query(sql, [customers], function(err, result){
+console.log(result); 
+)};
+
+connection.end();
+
+//check uniqueness of the email id.
+const customerSchema= new mongoose.Schema({
+email:{
+type: String,
+unique: true
+}});
+
+//update the details if same mail id found.
+approach: 1. check if same id is present in database.
+2. use sql update statement and where clause if the mail id is already in data base.
+
+
+4. Use the spread operator to merge the properties of two objects into one.
+
+const newObject= { ...person, ...student };
+
+
+6. Function to find the missing number
+Approach: we know that sum of n natural numbers is n*(n+1)/2
+1. first calculate sum of n numbers originalSum.
+2. then  find sum of the given array arraySum.
+3. the difference of t he originalSum and arraySum is our missing number.
+
+
+int findMissingNumber(vector<int>& nums){
+int arraySum=0;
+for(int i=0; i<nums.size(); i++) 
+arraySum+=nums[i];
+
+int arraySize= nums.size();
+
+int originalSum = (arraySize(arraySize+1))/2;
+int missingNum= originalSum- arraySum;
+return missingNum;
+
+}
+
+Time Complexity: O(size of the given array)
+Space Complexity: O(1)
