@@ -1,7 +1,7 @@
 Name : Vikas Singh
 Applied for : Nodejs role
 
-2. SQL Query
+2. SQL Query: 
 Here our main task to join 3 different tables.
 SELECT
   customers.name,
@@ -68,3 +68,14 @@ return missingNum;
 
 Time Complexity: O(size of the given array)
 Space Complexity: O(1)
+
+
+Source:
+For sql:  https://learnsql.com/ 
+Javascript: stack abuse
+Nodejs and sql: technicalkeeda
+
+
+
+
+
